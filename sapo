@@ -1,0 +1,38 @@
+#include<iostream>
+
+using namespace std;
+
+int main(){
+    int salto,ncanos,canos,auxcanos=0,boa,l=0;
+
+    cin >> salto;
+    cin >> ncanos;
+    for(int i=0;i<ncanos;i++){
+        cin >> canos;
+        if(auxcanos!=0){
+            if(auxcanos<=canos){
+                boa=canos+auxcanos;
+                if(boa>=canos){
+                }
+                else{
+                    l++;
+                }
+            }
+            else{
+                boa=salto-auxcanos;
+                if(boa>=canos){
+                }
+                else{
+                   l++; 
+                }
+            }
+        }
+        auxcanos=canos;
+    } 
+    if(l<1){
+    cout << "YOU WIN" << endl;
+    }
+    else{
+        cout << "GAME OVER" << endl;
+    }      
+}
